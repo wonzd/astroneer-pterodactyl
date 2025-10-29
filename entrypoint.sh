@@ -1,14 +1,26 @@
 #!/bin/bash
 
-cd /astrotux
-
+# Force chowning
 if [[ "$FORCE_CHOWN" =~ ^([Tt][Rr][Uu][Ee]|1|[Yy][Ee][Ss])$ ]]; then
-  echo Force chowning /astrotux folder.
-  chown -R $(id -u):$(id -g) /astrotux
+  echo Force chowning /home/container/AstroTuxLauncher folder.
+  chown -R $(id -u):$(id -g) /home/container/AstroTuxLauncher
   echo Done chowning.
 fi
 
+# Setup temp directory first
+mkdir -p "/home/container/temp_extract"
+export TMPDIR="/home/container/temp_extract"
+export TEMP="$TMPDIR"
+export TMP="$TMPDIR"
+
+# Added section - installation
+cd /home/container
+git clone https://github.com/birdhimself/AstroTuxLauncher.git
+cd /home/container/AstroTuxLauncher
+python3 -m venv ./venv
 source ./venv/bin/activate
+
+pip install -r requirements.txt
 
 python3 AstroTuxLauncher.py genconfig
 
@@ -46,6 +58,7 @@ shopt -u nocasematch
 
 cp $TEMPFILE launcher.toml
 
+
 python3 AstroTuxLauncher.py install
 
-python3 AstroTuxLauncher.py start
+{ python3 AstroTuxLauncher.py start ; echo "stopped."; } | cat
