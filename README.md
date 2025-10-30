@@ -1,11 +1,11 @@
-# Astroneer Dedicated Server (in a container)
+# Astroneer Dedicated Server (containerized)
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/wonzd/astroneer_pterodactyl.svg)](https://hub.docker.com/r/wonzd/astroneer_pterodactyl)
 [![Docker stars](https://img.shields.io/docker/stars/wonzd/astroneer_pterodactyl.svg)](https://hub.docker.com/r/wonzd/astroneer_pterodactyl)
 
 A docker image to allow Astroneer Dedicated Server to run inside of Pterodactyl using a modified version of [astroneer-pterodactyl](https://github.com/birdhimself/astroneer-docker), which was based on [AstroTuxLauncher](https://github.com/birdhimself/AstroTuxLauncher). The source code is [available on GitHub](https://github.com/wonzd/astroneer-pterodactyl/).
 
-I created this fork because the [official Astroneer egg](https://github.com/pelican-eggs/games-steamcmd/tree/main/astroneer) failed to start the server, causing the process to hang and then exit. This issue is resolved in this version by using AstroTuxLauncher for reliable server running and updating.
+I created this fork because the [official Astroneer egg](https://github.com/pelican-eggs/games-steamcmd/tree/main/astroneer) failed to start the Astroneer Dedicated Server in my testing, causing the process to hang and then exit. This issue is resolved in this version by using AstroTuxLauncher for reliable server running and updating.
 
 **Supports encryption as well as Intel/AMD CPUs, should run on ARM CPUs**
 
@@ -14,7 +14,7 @@ I created this fork because the [official Astroneer egg](https://github.com/peli
 ### Importing the pterodactyl egg
 1. Download the `.json` file from this repository
 2. Open your pterodactyl panel
-3. Navigate to Admin (gear icon) -> Nests
+3. Navigate to Admin (gear icon) > Nests
 4. You may wish to create a new nest with the `Create New` button, however this is not necessary
 5. Select `Import Egg`, select your downloaded egg file, then choose the nest this egg will be associated with
 6. Finally, import the egg
@@ -23,8 +23,8 @@ I created this fork because the [official Astroneer egg](https://github.com/peli
 Create the server as normal, ensuring you select the imported egg.
 
 The minimum recommended settings are:
-* **RAM:** 1.5 GB (1536 MB)
-* **Storage:** 5 GB (5120 MB). Note that storage requirements may increase with larger save files.
+* **RAM:** 700MB. Note that this increases with more players connected to the server.
+* **Storage:** 3 GB (3072 MB). Note that storage requirements may increase with larger save files.
 
 ## Configuration
 
@@ -67,9 +67,9 @@ The image is available from **docker.io**:
 
 ### Available tags
 
-| Tag            | Description                                                                      |
-|----------------|----------------------------------------------------------------------------------|
-| `latest`       | Latest version for general use. Recommended in most cases.                       |
+| Tag            | Description                                                                                                |
+|----------------|------------------------------------------------------------------------------------------------------------|
+| `latest`       | Latest version for general use. Recommended in most cases.                                                 |
 | `experimental` | Not currently available. Version with experimental features and changes . Will eventually become `latest`. |
 
 ### Architectures
