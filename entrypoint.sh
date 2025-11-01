@@ -58,6 +58,7 @@ shopt -u nocasematch
 
 cp $TEMPFILE launcher.toml
 
+# Install & start the server
 python3 AstroTuxLauncher.py install
 
 { python3 AstroTuxLauncher.py start ; echo "stopped."; } | cat
