@@ -12,7 +12,7 @@ I created this fork because the [official Astroneer egg](https://github.com/peli
 ## How to use
 
 ### Importing the pterodactyl egg
-1. Download the `.json` file from this repository
+1. Download the `.json` file from **Releases**
 2. Open your pterodactyl panel
 3. Navigate to Admin (gear icon) > Nests
 4. You may wish to create a new nest with the `Create New` button, however this is not necessary
@@ -20,7 +20,7 @@ I created this fork because the [official Astroneer egg](https://github.com/peli
 6. Finally, import the egg
 
 ### Creating the server
-Create the server as normal, ensuring you select the imported egg.
+Ensure to allocate and select port **7777** for this server, unless you have changed the default port.
 
 The minimum recommended settings are:
 * **RAM:** 700MB. Note that this increases with more players connected to the server.
