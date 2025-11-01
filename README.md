@@ -7,7 +7,7 @@ A docker image to allow Astroneer Dedicated Server to run inside of Pterodactyl 
 
 I created this fork because the [official Astroneer egg](https://github.com/pelican-eggs/games-steamcmd/tree/main/astroneer) failed to start the Astroneer Dedicated Server in my testing, causing the process to hang and then exit. This issue is resolved in this version by using AstroTuxLauncher for reliable server running and updating.
 
-**Supports encryption as well as Intel/AMD CPUs, should run on ARM CPUs**
+**Supports encryption as well as Intel/AMD CPUs, should run on ARM CPUs although untested.**
 
 ## How to use
 
