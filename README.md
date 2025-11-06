@@ -3,7 +3,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/wonzd/astroneer_pterodactyl.svg)](https://hub.docker.com/r/wonzd/astroneer_pterodactyl)
 [![Docker stars](https://img.shields.io/docker/stars/wonzd/astroneer_pterodactyl.svg)](https://hub.docker.com/r/wonzd/astroneer_pterodactyl)
 
-A docker image to allow Astroneer Dedicated Server to run inside of Pterodactyl using a modified version of [astroneer-pterodactyl](https://github.com/birdhimself/astroneer-docker), which was based on [AstroTuxLauncher](https://github.com/birdhimself/AstroTuxLauncher). The source code is [available on GitHub](https://github.com/wonzd/astroneer-pterodactyl/).
+A docker image to allow Astroneer Dedicated Server to run inside of Pterodactyl using a modified version of [astroneer-docker](https://github.com/birdhimself/astroneer-docker), which was based on [AstroTuxLauncher](https://github.com/birdhimself/AstroTuxLauncher). The source code is [available on GitHub](https://github.com/wonzd/astroneer-pterodactyl/).
 
 I created this fork because the [official Astroneer egg](https://github.com/pelican-eggs/games-steamcmd/tree/main/astroneer) failed to start the Astroneer Dedicated Server in my testing, causing the process to hang and then exit. This issue is resolved in this version by using AstroTuxLauncher for reliable server running and updating.
 
