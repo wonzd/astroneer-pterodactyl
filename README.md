@@ -1,5 +1,8 @@
 # Astroneer Dedicated Server (containerized)
 
+⚠️ **Status: Broken**
+This project is currently not functional, but I should be able to fix it in the next few weeks. Use at your own risk.
+
 [![Docker Pulls](https://img.shields.io/docker/pulls/wonzd/astroneer_pterodactyl.svg)](https://hub.docker.com/r/wonzd/astroneer_pterodactyl)
 [![Docker stars](https://img.shields.io/docker/stars/wonzd/astroneer_pterodactyl.svg)](https://hub.docker.com/r/wonzd/astroneer_pterodactyl)
 
